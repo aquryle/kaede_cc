@@ -14,6 +14,12 @@
 //_SINT ios_base::Init::init_cnt;       // Remove the comment when you use ios
 #endif
 
+#include "common.h"
+#include "uart.h"
+#include "pin.h"
+
+
+
 void main(void);
 #ifdef __cplusplus
 extern "C" {
@@ -24,6 +30,11 @@ void abort(void);
 void main(void)
 {
 
+
+
+
+	while (1);
+	return;
 }
 
 #ifdef __cplusplus

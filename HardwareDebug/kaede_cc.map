@@ -1,0 +1,94 @@
+Renesas Optimizing Linker (W3.05.00 )             20-Jan-2024 02:03:07
+
+*** Options ***
+
+-subcommand=Linkerkaede_cc.tmp
+-MAKEUD=C:\Users\sata\develop\Renesas\e2_kaede\kaede_cc\HardwareDebug/kaede_cc_l.ud
+-noprelink
+-input=".\generate\dbsct.obj"
+-input=".\generate\hwsetup.obj"
+-input=".\generate\intprg.obj"
+-input=".\generate\resetprg.obj"
+-input=".\generate\sbrk.obj"
+-input=".\generate\vecttbl.obj"
+-input=".\src\kaede_cc.obj"
+-input=".\src\pin.obj"
+-input=".\src\uart.obj"
+-library=".\kaede_cc.lib"
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,PResetPRG,C_1,C_2,C,C$*,D*,W*,L,PIntPRG,P/0FFC00000,EXCEPTVECT/0FFFFFF80,RESETVECT/0FFFFFFFC
+-output="kaede_cc.abs"
+-form=absolute
+-nomessage
+-list=kaede_cc.map
+-nooptimize
+-rom=D=R,D_1=R_1,D_2=R_2
+-cpu=RAM=00000000-0007ffff,FIX=00080000-00083fff,FIX=00086000-00087fff,FIX=00088000-0009ffff,FIX=000a0000-000a3fff,RAM=000a4000-000a5fff,FIX=000a6000-000bffff,FIX=000c0000-000dffff,FIX=000e0000-000fffff,ROM=00100000-0010ffff,RAM=00120040-0012006f,FIX=007fe000-007fffff,RAM=00ff8000-00ffffff,ROM=ffc00000-ffffffff
+-nologo
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+SU
+                                  00000004  00000103       100   4
+SI
+                                  00000104  00000403       300   4
+B_1
+                                  00000404  00000404         0   1
+R_1
+                                  00000404  00000404         0   1
+B_2
+                                  00000404  00000404         0   1
+R_2
+                                  00000404  00000404         0   1
+B
+                                  00000404  00000803       400   4
+R
+                                  00000804  00000807         4   4
+$ADDR_C_120040
+                                  00120040  00120043         4   1
+$ADDR_C_120048
+                                  00120048  0012004b         4   1
+$ADDR_C_120050
+                                  00120050  0012006f        20   1
+PResetPRG
+                                  ffc00000  ffc00038        39   1
+C_1
+                                  ffc00039  ffc00039         0   1
+C_2
+                                  ffc00039  ffc00039         0   1
+C
+                                  ffc0003c  ffc0006f        34   4
+C$DSEC
+                                  ffc00070  ffc00093        24   4
+C$BSEC
+                                  ffc00094  ffc000ab        18   4
+C$INIT
+                                  ffc000ac  ffc000ac         0   1
+C$VECT
+                                  ffc000ac  ffc004ab       400   4
+C$VTBL
+                                  ffc004ac  ffc004ac         0   1
+D
+                                  ffc004ac  ffc004af         4   4
+D_1
+                                  ffc004b0  ffc004b0         0   1
+D_2
+                                  ffc004b0  ffc004b0         0   1
+W
+                                  ffc004b0  ffc004b0         0   1
+W_1
+                                  ffc004b0  ffc004b0         0   1
+W_2
+                                  ffc004b0  ffc004b0         0   1
+L
+                                  ffc004b0  ffc004b0         0   1
+PIntPRG
+                                  ffc004b0  ffc00679       1ca   1
+P
+                                  ffc0067a  ffc006e7        6e   1
+EXCEPTVECT
+                                  ffffff80  fffffffb        7c   4
+RESETVECT
+                                  fffffffc  ffffffff         4   4

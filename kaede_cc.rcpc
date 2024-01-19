@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MicomToolCommonProjectFile Version="1.00">
+  <CreatorType Name="e2studio" Version=""/>
+  <Placeholders>
+    <PlaceholderPrefix>${</PlaceholderPrefix>
+    <PlaceholderPostfix>}</PlaceholderPostfix>
+  </Placeholders>
+  <Project Name="kaede_cc" Type="Application">
+    <Files>
+      <Category Name="generate">
+        <Path>generate\dbsct.c</Path>
+        <Path>generate\hwsetup.c</Path>
+        <Path>generate\intprg.c</Path>
+        <Path>generate\iodefine.h</Path>
+        <Path>generate\resetprg.c</Path>
+        <Path>generate\sbrk.c</Path>
+        <Path>generate\sbrk.h</Path>
+        <Path>generate\stacksct.h</Path>
+        <Path>generate\typedefine.h</Path>
+        <Path>generate\vect.h</Path>
+        <Path>generate\vecttbl.c</Path>
+      </Category>
+      <Category Name="src">
+        <Path>src\common.h</Path>
+        <Path>src\kaede_cc.c</Path>
+        <Path>src\pin.c</Path>
+        <Path>src\pin.h</Path>
+        <Path>src\uart.c</Path>
+        <Path>src\uart.h</Path>
+      </Category>
+    </Files>
+    <Device Category="com.renesas.cdt.managedbuild.renesas.ccrx.common.option.cpu.rx600" Series="RX">R5F564MLCxFB</Device>
+    <BuildOptions Name="CC-RX" Version="v3.05.00">
+      <BuildMode Active="True" Name="HardwareDebug">
+        <GeneralOptions/>
+        <CompileOptions>
+          <Option>-isa=rxv2</Option>
+          <Option>-fpu</Option>
+          <Option>-include="${ProjDirPath}\generate"</Option>
+          <Option>-utf8</Option>
+          <Option>-nomessage</Option>
+          <Option>-debug</Option>
+          <Option>-outcode=utf8</Option>
+          <Option>-nologo</Option>
+          <Option>-lang=c</Option>
+          <Option>-lang=cpp</Option>
+          <Option>-output=obj=${CONFIGDIR}\${FILELEAF}.obj</Option>
+          <Option>-obj_path=${CONFIGDIR}</Option>
+        </CompileOptions>
+        <AssembleOptions>
+          <Option>-isa=rxv2</Option>
+          <Option>-fpu</Option>
+          <Option>-utf8</Option>
+          <Option>-debug</Option>
+          <Option>-nologo</Option>
+          <Option>-output=${CONFIGDIR}</Option>
+        </AssembleOptions>
+        <LinkOptions>
+          <Option>-output="${ProjName}.abs"</Option>
+          <Option>-form=absolute</Option>
+          <Option>-nomessage</Option>
+          <Option>-list=${ProjName}.map</Option>
+          <Option>-nooptimize</Option>
+          <Option>-rom=D=R,D_1=R_1,D_2=R_2</Option>
+          <Option>-cpu=RAM=00000000-0007ffff,FIX=00080000-00083fff,FIX=00086000-00087fff,FIX=00088000-0009ffff,FIX=000a0000-000a3fff,RAM=000a4000-000a5fff,FIX=000a6000-000bffff,FIX=000c0000-000dffff,FIX=000e0000-000fffff,ROM=00100000-0010ffff,RAM=00120040-0012006f,FIX=007fe000-007fffff,RAM=00ff8000-00ffffff,ROM=ffc00000-ffffffff</Option>
+          <Option>-nologo</Option>
+          <Option>-start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,PResetPRG,C_1,C_2,C,C$*,D*,W*,L,PIntPRG,P/0FFC00000,EXCEPTVECT/0FFFFFF80,RESETVECT/0FFFFFFFC</Option>
+          <PreLinker>Auto</PreLinker>
+        </LinkOptions>
+        <LibraryGenerateOptions>
+          <Option>-isa=rxv2</Option>
+          <Option>-fpu</Option>
+          <Option>-lang=c</Option>
+          <Option>-head=runtime,stdio,stdlib,string,new</Option>
+          <Option>-output="${ProjName}.lib"</Option>
+          <Option>-nologo</Option>
+          <GenerateMode>BuildOptionChanged</GenerateMode>
+        </LibraryGenerateOptions>
+        <LinkOrder>
+          <Path>HardwareDebug\dbsct.obj</Path>
+          <Path>HardwareDebug\hwsetup.obj</Path>
+          <Path>HardwareDebug\intprg.obj</Path>
+          <Path>HardwareDebug\resetprg.obj</Path>
+          <Path>HardwareDebug\sbrk.obj</Path>
+          <Path>HardwareDebug\vecttbl.obj</Path>
+          <Path>HardwareDebug\kaede_cc.obj</Path>
+          <Path>HardwareDebug\pin.obj</Path>
+          <Path>HardwareDebug\uart.obj</Path>
+          <Path>HardwareDebug\kaede_cc.lib</Path>
+        </LinkOrder>
+        <CommonOptions>
+          <IncludePathForC>"${ProjDirPath}\generate"</IncludePathForC>
+        </CommonOptions>
+      </BuildMode>
+    </BuildOptions>
+  </Project>
+</MicomToolCommonProjectFile>
