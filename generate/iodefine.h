@@ -67,6 +67,11 @@
 /********************************************************************************/
 #ifndef __RX64MIODEFINE_HEADER__
 #define __RX64MIODEFINE_HEADER__
+
+#ifdef _VSCODE
+#define __evenaccess
+#endif
+
 #pragma bit_order left
 #pragma unpack
 struct st_bsc {
