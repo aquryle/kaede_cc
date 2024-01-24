@@ -48,6 +48,23 @@ typedef unsigned long	uint32;
 #define _B30	(1u << 30);
 #define _B31	(1u << 31);
 
+/* Interrupt Priority Level Select (IPR[3:0]) */
+#define _IPR_LEVEL0		(0x00U) /* Level 0 (interrupt disabled) */
+#define _IPR_LEVEL1		(0x01U) /* Level 1 */
+#define _IPR_LEVEL2		(0x02U) /* Level 2 */
+#define _IPR_LEVEL3		(0x03U) /* Level 3 */
+#define _IPR_LEVEL4		(0x04U) /* Level 4 */
+#define _IPR_LEVEL5		(0x05U) /* Level 5 */
+#define _IPR_LEVEL6		(0x06U) /* Level 6 */
+#define _IPR_LEVEL7		(0x07U) /* Level 7 */
+#define _IPR_LEVEL8		(0x08U) /* Level 8 */
+#define _IPR_LEVEL9		(0x09U) /* Level 9 */
+#define _IPR_LEVEL10	(0x0AU) /* Level 10 */
+#define _IPR_LEVEL11	(0x0BU) /* Level 11 */
+#define _IPR_LEVEL12	(0x0CU) /* Level 12 */
+#define _IPR_LEVEL13	(0x0DU) /* Level 13 */
+#define _IPR_LEVEL14	(0x0EU) /* Level 14 */
+#define _IPR_LEVEL15	(0x0FU) /* Level 15 (highest) */
 
 
 #endif // COMMON_H_

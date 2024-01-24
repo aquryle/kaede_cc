@@ -11,6 +11,7 @@
 
 #include "common.h"
 
-void pin_sci7_as_uart();
+void setpin_sci7(void);
+
 
 #endif // PIN_H_

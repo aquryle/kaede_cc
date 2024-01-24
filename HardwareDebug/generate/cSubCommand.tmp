@@ -2,7 +2,7 @@
 -fpu
 -MAKEUD="C:\Users\sata\develop\Renesas\e2_kaede\kaede_cc\HardwareDebug\generate"
 -include="C:\Program Files (x86)\Renesas\RX\3_5_0\/include"
--include="C:/Users/sata/develop/Renesas/e2_kaede/kaede_cc/generate" 
+-include="C:/Users/sata/develop/Renesas/e2_kaede/kaede_cc/generate"
 -lang=c
 -utf8
 -nomessage
@@ -10,4 +10,4 @@
 -obj_path="generate"
 -debug
 -outcode=utf8
--nologo 
+-nologo

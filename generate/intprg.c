@@ -247,10 +247,10 @@ void Excep_WDT_WUNI(void){ }
 void Excep_PDC_PCDFI(void){ }
 
 // SCI7 RXI7
-void Excep_SCI7_RXI7(void){ }
+// void Excep_SCI7_RXI7(void){ }
 
 // SCI7 TXI7
-void Excep_SCI7_TXI7(void){ }
+// void Excep_SCI7_TXI7(void){ }
 
 // SCIFA8 RXIF8
 void Excep_SCIFA8_RXIF8(void){ }
@@ -274,7 +274,7 @@ void Excep_SCIFA10_TXIF10(void){ }
 void Excep_ICU_GROUPBE0(void){ }
 
 // ICU GROUPBL0
-void Excep_ICU_GROUPBL0(void){ }
+// void Excep_ICU_GROUPBL0(void){ }
 
 // ICU GROUPBL1
 void Excep_ICU_GROUPBL1(void){ }

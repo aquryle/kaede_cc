@@ -1,7 +1,7 @@
--MAKEUD_LBG="C:\Users\sata\develop\Renesas\e2_kaede\kaede_cc\HardwareDebug\\kaede_cc_lbg.ud"
--isa=rxv2
--fpu
--lang=c
--head=runtime,stdio,stdlib,string,new
--output="kaede_cc.lib"
+-MAKEUD_LBG="C:\Users\sata\develop\Renesas\e2_kaede\kaede_cc\HardwareDebug\\kaede_cc_lbg.ud" 
+-isa=rxv2 
+-fpu 
+-lang=c 
+-head=runtime,stdio,stdlib,string,new 
+-output="kaede_cc.lib" 
 -nologo

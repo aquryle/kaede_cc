@@ -1,15 +1,13 @@
 /*
- * uart.h
+ * clock.h
  *
  *  Created on: 2024/01/20
  *      Author: sata
  */
 
-#ifndef UART_H_
-#define UART_H_
+#ifndef CLOCK_H_
+#define CLOCK_H_
 
 #include "common.h"
-#include "pin.h"
 
-
-#endif // UART_H_
+#endif /* CLOCK_H_ */
