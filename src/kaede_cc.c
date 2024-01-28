@@ -29,9 +29,14 @@ void abort(void);
 
 void main(void)
 {
+	uint16 num = 8;
+	uint8 *buf = "hello!\r\n";
 
+	set_clock();
+	uart_create(0);
+	uart_start();
 
-
+	SCI7_Serial_Send(buf, num);
 
 	while (1);
 	return;

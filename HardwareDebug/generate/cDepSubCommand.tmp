@@ -2,8 +2,8 @@
 -MP
 -isa=rxv2
 -fpu
--include="C:\Program Files (x86)\Renesas\RX\3_5_0\/include"
--include="C:/Users/sata/develop/Renesas/e2_kaede/kaede_cc/generate"
+-include="C:\Program Files (x86)\Renesas\RX\3_5_0\include"
+-include="C:\Users\sata\develop\Renesas\e2_kaede\kaede_cc\generate" 
 -lang=c
 -utf8
 -nomessage

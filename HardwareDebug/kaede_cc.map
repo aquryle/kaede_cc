@@ -1,10 +1,9 @@
-Renesas Optimizing Linker (W3.05.00 )             20-Jan-2024 18:38:43
+Renesas Optimizing Linker (W3.05.00 )             29-Jan-2024 01:03:20
 
 *** Options ***
 
 -subcommand=Linkerkaede_cc.tmp
--MAKEUD="C:\Users\sata\develop\Renesas\e2_kaede\kaede_cc\HardwareDebug/kaede_cc_l.ud" 
--noprelink 
+-noprelink
 -input=".\generate\dbsct.obj"
 -input=".\generate\hwsetup.obj"
 -input=".\generate\intprg.obj"
@@ -12,18 +11,19 @@ Renesas Optimizing Linker (W3.05.00 )             20-Jan-2024 18:38:43
 -input=".\generate\sbrk.obj"
 -input=".\generate\vecttbl.obj"
 -input=".\src\clock.obj"
+-input=".\src\grpir.obj"
 -input=".\src\kaede_cc.obj"
 -input=".\src\pin.obj"
 -input=".\src\uart.obj"
 -library=".\kaede_cc.lib"
 -start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,PResetPRG,C_1,C_2,C,C$*,D*,W*,L,PIntPRG,P/0FFC00000,EXCEPTVECT/0FFFFFF80,RESETVECT/0FFFFFFFC
--output="kaede_cc.abs" 
--form=absolute 
--nomessage 
--list 
--nooptimize 
--rom=D=R,D_1=R_1,D_2=R_2 
--cpu=RAM=00000000-0007ffff,FIX=00080000-00083fff,FIX=00086000-00087fff,FIX=00088000-0009ffff,FIX=000a0000-000a3fff,RAM=000a4000-000a5fff,FIX=000a6000-000bffff,FIX=000c0000-000dffff,FIX=000e0000-000fffff,ROM=00100000-0010ffff,RAM=00120040-0012006f,FIX=007fe000-007fffff,RAM=00ff8000-00ffffff,ROM=ffc00000-ffffffff 
+-output="kaede_cc.abs"
+-form=absolute
+-nomessage
+-list=kaede_cc.map
+-nooptimize
+-rom=D=R,D_1=R_1,D_2=R_2
+-cpu=RAM=00000000-0007ffff,FIX=00080000-00083fff,FIX=00086000-00087fff,FIX=00088000-0009ffff,FIX=000a0000-000a3fff,RAM=000a4000-000a5fff,FIX=000a6000-000bffff,FIX=000c0000-000dffff,FIX=000e0000-000fffff,ROM=00100000-0010ffff,RAM=00120040-0012006f,FIX=007fe000-007fffff,RAM=00ff8000-00ffffff,ROM=ffc00000-ffffffff
 -nologo
 
 *** Error information ***
@@ -40,13 +40,13 @@ B_1
 R_1
                                   00000404  00000404         0   1
 B_2
-                                  00000404  00000404         0   1
+                                  00000404  00000409         6   2
 R_2
-                                  00000404  00000404         0   1
+                                  0000040a  0000040a         0   1
 B
-                                  00000404  00000803       400   4
+                                  0000040c  00000813       408   4
 R
-                                  00000804  00000807         4   4
+                                  00000814  00000817         4   4
 $ADDR_C_120040
                                   00120040  00120043         4   1
 $ADDR_C_120048
@@ -84,11 +84,11 @@ W_1
 W_2
                                   ffc004b0  ffc004b0         0   1
 L
-                                  ffc004b0  ffc004b0         0   1
+                                  ffc004b0  ffc004b8         9   4
 PIntPRG
-                                  ffc004b0  ffc00679       1ca   1
+                                  ffc004b9  ffc0067c       1c4   1
 P
-                                  ffc0067a  ffc007dd       164   1
+                                  ffc0067d  ffc008fd       281   1
 EXCEPTVECT
                                   ffffff80  fffffffb        7c   4
 RESETVECT

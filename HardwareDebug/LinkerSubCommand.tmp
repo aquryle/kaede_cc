@@ -5,6 +5,7 @@
 -input=".\generate\sbrk.obj"
 -input=".\generate\vecttbl.obj"
 -input=".\src\clock.obj"
+-input=".\src\grpir.obj"
 -input=".\src\kaede_cc.obj"
 -input=".\src\pin.obj"
 -input=".\src\uart.obj"

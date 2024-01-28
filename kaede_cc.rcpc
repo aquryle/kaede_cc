@@ -24,6 +24,7 @@
         <Path>src\clock.c</Path>
         <Path>src\clock.h</Path>
         <Path>src\common.h</Path>
+        <Path>src\grpir.c</Path>
         <Path>src\kaede_cc.c</Path>
         <Path>src\pin.c</Path>
         <Path>src\pin.h</Path>
@@ -86,6 +87,7 @@
           <Path>HardwareDebug\generate\sbrk.obj</Path>
           <Path>HardwareDebug\generate\vecttbl.obj</Path>
           <Path>HardwareDebug\src\clock.obj</Path>
+          <Path>HardwareDebug\src\grpir.obj</Path>
           <Path>HardwareDebug\src\kaede_cc.obj</Path>
           <Path>HardwareDebug\src\pin.obj</Path>
           <Path>HardwareDebug\src\uart.obj</Path>

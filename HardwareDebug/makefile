@@ -4,13 +4,12 @@
 
 -include makefile.init
 
-RM := rm -rf
-OUTPUT_FILES :="kaede_cc.sni" "kaede_cc.dbg" "kaede_cc.map" "kaede_cc.x" "kaede_cc.lbp" "kaede_cc.bls" "kaede_cc.libelf" "kaede_cc.rel" "kaede_cc.lbk" "kaede_cc.abs" "kaede_cc.jmp" "kaede_cc.fsy" "kaede_cc.mi" "kaede_cc.udm" "kaede_cc_l.ud" "kaede_cc_c.ud" "kaede_cc_lbg.ud" "src/clock.asm" "src/clock.p" "src/clock.pp" "src/clock.src" "src/clock.lst" "src/clock.prn" "src/clock.i" "src/clock.drv.ud" "src/clock.frt.ud" "src/clock.asm.ud" "src/kaede_cc.asm" "src/kaede_cc.p" "src/kaede_cc.pp" "src/kaede_cc.src" "src/kaede_cc.lst" "src/kaede_cc.prn" "src/kaede_cc.i" "src/kaede_cc.drv.ud" "src/kaede_cc.frt.ud" "src/kaede_cc.asm.ud" "src/pin.asm" "src/pin.p" "src/pin.pp" "src/pin.src" "src/pin.lst" "src/pin.prn" "src/pin.i" "src/pin.drv.ud" "src/pin.frt.ud" "src/pin.asm.ud" "src/uart.asm" "src/uart.p" "src/uart.pp" "src/uart.src" "src/uart.lst" "src/uart.prn" "src/uart.i" "src/uart.drv.ud" "src/uart.frt.ud" "src/uart.asm.ud" "generate/dbsct.asm" "generate/dbsct.p" "generate/dbsct.pp" "generate/dbsct.src" "generate/dbsct.lst" "generate/dbsct.prn" "generate/dbsct.i" "generate/dbsct.drv.ud" "generate/dbsct.frt.ud" "generate/dbsct.asm.ud" "generate/hwsetup.asm" "generate/hwsetup.p" "generate/hwsetup.pp" "generate/hwsetup.src" "generate/hwsetup.lst" "generate/hwsetup.prn" "generate/hwsetup.i" "generate/hwsetup.drv.ud" "generate/hwsetup.frt.ud" "generate/hwsetup.asm.ud" "generate/intprg.asm" "generate/intprg.p" "generate/intprg.pp" "generate/intprg.src" "generate/intprg.lst" "generate/intprg.prn" "generate/intprg.i" "generate/intprg.drv.ud" "generate/intprg.frt.ud" "generate/intprg.asm.ud" "generate/resetprg.asm" "generate/resetprg.p" "generate/resetprg.pp" "generate/resetprg.src" "generate/resetprg.lst" "generate/resetprg.prn" "generate/resetprg.i" "generate/resetprg.drv.ud" "generate/resetprg.frt.ud" "generate/resetprg.asm.ud" "generate/sbrk.asm" "generate/sbrk.p" "generate/sbrk.pp" "generate/sbrk.src" "generate/sbrk.lst" "generate/sbrk.prn" "generate/sbrk.i" "generate/sbrk.drv.ud" "generate/sbrk.frt.ud" "generate/sbrk.asm.ud" "generate/vecttbl.asm" "generate/vecttbl.p" "generate/vecttbl.pp" "generate/vecttbl.src" "generate/vecttbl.lst" "generate/vecttbl.prn" "generate/vecttbl.i" "generate/vecttbl.drv.ud" "generate/vecttbl.frt.ud" "generate/vecttbl.asm.ud"
+RM := rm -rf *.sni *.dbg *.lst *.lis *.lpp *.map *.x *.lbp *.bls *.libelf *.rel *.lbk *.abs *.mi *.jmp *.fsy 1st/*.abs 1st/*.jmp 1st/*.fsy
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/subdir.mk
 -include generate/subdir.mk
+-include src/subdir.mk
 
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C_DEPS)),)
@@ -30,18 +29,6 @@ ifneq ($(strip $(CC_DEPS)),)
 endif 
 ifneq ($(strip $(C++_DEPS)),)
 -include $(C++_DEPS)
-endif 
-ifneq ($(strip $(CCM_DEPS)),)
--include $(CCM_DEPS)
-endif 
-ifneq ($(strip $(CXXM_DEPS)),)
--include $(CXXM_DEPS)
-endif 
-ifneq ($(strip $(C++M_DEPS)),)
--include $(C++M_DEPS)
-endif 
-ifneq ($(strip $(CP_DEPS)),)
--include $(CP_DEPS)
 endif 
 ifneq ($(strip $(S_UPPER_DEPS)),)
 -include $(S_UPPER_DEPS)
@@ -99,7 +86,7 @@ $(ASSEMBLER_OBJS) \
 $(CUSTOM_OBJS)
 
 # All Target
-all: $(LINKER_OUTPUT_OUTPUTS) kaede_cc.x kaede_cc.udm
+all: $(LINKER_OUTPUT_OUTPUTS) kaede_cc.x
 
 	@echo 'Build complete.'
 
@@ -110,7 +97,7 @@ kaede_cc.abs: $(OBJS)  $(ALL_ASMS) $(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS)
 	@sed -e "s/^/    /" "Linkerkaede_cc.tmp"
 	rlink -subcommand="Linkerkaede_cc.tmp"
 	@echo 'Finished building target:'
-	@echo ''
+	@echo.
 
 
 kaede_cc.lib: 
@@ -119,23 +106,18 @@ kaede_cc.lib:
 	@sed -e "s/^/    /" "LibraryGeneratorkaede_cc.tmp"
 	lbgrx -subcommand="LibraryGeneratorkaede_cc.tmp"
 	@echo 'Finished building:'
-	@echo ''
+	@echo.
 
 kaede_cc.x: kaede_cc.abs
-		-C:\Users\sata\.eclipse\com.renesas.platform_1435879475\Utilities\\ccrx\renesas_cc_converter kaede_cc.abs kaede_cc.x
-
-kaede_cc.udm: $(LINKER_OUTPUT_OUTPUTS)
-	udcollector -subcommand=udSubcommand.tmp -output=kaede_cc.udm
+		-C:\Renesas\e2_studio\Utilities\\ccrx\renesas_cc_converter.exe kaede_cc.abs kaede_cc.x
 
 # Other Targets
 clean:
-	-$(file > clean_file.tmp, $(LINKER_OUTPUT_OUTPUTS) $(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS) $(OBJS) $(C_DEPS) $(CPP_DEPS) $(ASM_DEPS) $(DSP_DEPS) $(OUTPUT_FILES))
-	-@ xargs -P 2 -s 26000 -t -a clean_file.tmp $(RM)
-	-@$(RM) clean_file.tmp
-	@echo ''
+	-$(RM) $(LINKER_OUTPUT_OUTPUTS) $(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS)
+	-rm -rf generate/*.obj generate/*.d generate/*.asm generate/*.p generate/*.pp generate/*.src generate/*.jmp generate/*.lst generate/*.prn generate/*.i 
+	-rm -rf src/*.obj src/*.d src/*.asm src/*.p src/*.pp src/*.src src/*.jmp src/*.lst src/*.prn src/*.i 
+	@echo
 	@echo 'Clean complete.'
 
 .PHONY: all clean 
 -include ../makefile.targets
-
-.SILENT:
