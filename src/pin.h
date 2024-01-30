@@ -11,7 +11,7 @@
 
 #include "common.h"
 
-void setpin_sci7(void);
+extern void setpin_sci7(void);
 
 
 #endif // PIN_H_

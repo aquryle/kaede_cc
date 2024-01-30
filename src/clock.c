@@ -10,6 +10,10 @@
 void set_clock() {
 	SYSTEM.PRCR.WORD = 0xA50Bu;
 
+	// port
+	PORT3.PDR.BYTE = 0u;
+	PORT3.PDR.BYTE - 0u;
+
 	// main clock start
 	SYSTEM.MOSCWTCR.BYTE = 0x0Fu;
 	SYSTEM.MOSCCR.BYTE = 0x00u;

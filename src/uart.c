@@ -79,38 +79,38 @@ void Excep_SCI7_TXI7(void) {
 
 // この中でどの割り込みが発生したか確認する
 void Excep_ICU_GROUPBL0(void) {
-	if (ICU.GRPBL0.BIT.IS0);
-	if (ICU.GRPBL0.BIT.IS1);
-	if (ICU.GRPBL0.BIT.IS2);
-	if (ICU.GRPBL0.BIT.IS3);
-	if (ICU.GRPBL0.BIT.IS4);
-	if (ICU.GRPBL0.BIT.IS5);
-	if (ICU.GRPBL0.BIT.IS6);
-	if (ICU.GRPBL0.BIT.IS7);
-	if (ICU.GRPBL0.BIT.IS8);
-	if (ICU.GRPBL0.BIT.IS9);
-	if (ICU.GRPBL0.BIT.IS10);
-	if (ICU.GRPBL0.BIT.IS11);
-	if (ICU.GRPBL0.BIT.IS12);
-	if (ICU.GRPBL0.BIT.IS13);
+	// if (ICU.GRPBL0.BIT.IS0);
+	// if (ICU.GRPBL0.BIT.IS1);
+	// if (ICU.GRPBL0.BIT.IS2);
+	// if (ICU.GRPBL0.BIT.IS3);
+	// if (ICU.GRPBL0.BIT.IS4);
+	// if (ICU.GRPBL0.BIT.IS5);
+	// if (ICU.GRPBL0.BIT.IS6);
+	// if (ICU.GRPBL0.BIT.IS7);
+	// if (ICU.GRPBL0.BIT.IS8);
+	// if (ICU.GRPBL0.BIT.IS9);
+	// if (ICU.GRPBL0.BIT.IS10);
+	// if (ICU.GRPBL0.BIT.IS11);
+	// if (ICU.GRPBL0.BIT.IS12);
+	// if (ICU.GRPBL0.BIT.IS13);
 	if (ICU.GRPBL0.BIT.IS14)	Excep_TEI7();	// SCI7送信完了
-	if (ICU.GRPBL0.BIT.IS15)	Excep_ERI7();	// SCI7受信エラー
-	if (ICU.GRPBL0.BIT.IS16);
-	if (ICU.GRPBL0.BIT.IS17);
-	if (ICU.GRPBL0.BIT.IS18);
-	if (ICU.GRPBL0.BIT.IS19);
-	if (ICU.GRPBL0.BIT.IS20);
-	if (ICU.GRPBL0.BIT.IS21);
-	if (ICU.GRPBL0.BIT.IS22);	// received
-	if (ICU.GRPBL0.BIT.IS23);	// received
-	if (ICU.GRPBL0.BIT.IS24);
-	if (ICU.GRPBL0.BIT.IS25);	// received
-	if (ICU.GRPBL0.BIT.IS26);
-	if (ICU.GRPBL0.BIT.IS27);
-	if (ICU.GRPBL0.BIT.IS28);
-	if (ICU.GRPBL0.BIT.IS29);
-	if (ICU.GRPBL0.BIT.IS30);
-	if (ICU.GRPBL0.BIT.IS31);
+	// if (ICU.GRPBL0.BIT.IS15)	Excep_ERI7();	// SCI7受信エラー
+	// if (ICU.GRPBL0.BIT.IS16);
+	// if (ICU.GRPBL0.BIT.IS17);
+	// if (ICU.GRPBL0.BIT.IS18);
+	// if (ICU.GRPBL0.BIT.IS19);
+	// if (ICU.GRPBL0.BIT.IS20);
+	// if (ICU.GRPBL0.BIT.IS21);
+	// if (ICU.GRPBL0.BIT.IS22);	// received
+	// if (ICU.GRPBL0.BIT.IS23);	// received
+	// if (ICU.GRPBL0.BIT.IS24);
+	// if (ICU.GRPBL0.BIT.IS25);	// received
+	// if (ICU.GRPBL0.BIT.IS26);
+	// if (ICU.GRPBL0.BIT.IS27);
+	// if (ICU.GRPBL0.BIT.IS28);
+	// if (ICU.GRPBL0.BIT.IS29);
+	// if (ICU.GRPBL0.BIT.IS30);
+	// if (ICU.GRPBL0.BIT.IS31);
 }
 
 

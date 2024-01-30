@@ -1,4 +1,4 @@
-Renesas Optimizing Linker (W3.05.00 )             29-Jan-2024 01:03:20
+Renesas Optimizing Linker (W3.05.00 )             31-Jan-2024 01:15:14
 
 *** Options ***
 
@@ -88,7 +88,7 @@ L
 PIntPRG
                                   ffc004b9  ffc0067c       1c4   1
 P
-                                  ffc0067d  ffc008fd       281   1
+                                  ffc0067d  ffc008cf       253   1
 EXCEPTVECT
                                   ffffff80  fffffffb        7c   4
 RESETVECT

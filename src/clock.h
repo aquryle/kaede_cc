@@ -10,4 +10,6 @@
 
 #include "common.h"
 
+extern void set_clock();
+
 #endif /* CLOCK_H_ */
